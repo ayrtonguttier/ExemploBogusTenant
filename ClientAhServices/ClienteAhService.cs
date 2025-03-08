@@ -8,7 +8,7 @@ public class ClienteAhService : IClienteService
 {
     public IEnumerable<Cliente> GetClientes()
     {
-        var faker = new ClienteFaker();
+        var faker = new ClienteFaker(nameof(ClienteAhService));
         faker.UseSeed(200);
         return faker.GenerateForever();
     }
